@@ -2,12 +2,10 @@ package FWCScoreBoard.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import FWCScoreBoard.Model.*;
 
 
 /**
@@ -22,7 +20,11 @@ class FWCScoreBoardTest {
     @Test
     @DisplayName("1. Try to create team with too short name")
     public void testTooShortTeamName(){
-    //TODO
+        try {
+        	Team myTeam = new Team("AB");
+        }catch (Exception e) {
+            assertTrue(e.getMessage().equals("Too short team name"), "Game name is too short");
+        }
     }
     
 	/**
@@ -32,6 +34,7 @@ class FWCScoreBoardTest {
     @DisplayName("2. Create ScoreBoard and check that has no elements")
     public void testGamesBoardConstructor(){
         //TODO
+    	assertTrue(false);
     }
     
 	/**
@@ -41,6 +44,7 @@ class FWCScoreBoardTest {
     @DisplayName("3. Try to add match with too short team name")
     public void testTooShortTeamNameMatchCreation(){
         //TODO
+    	assertTrue(false);
     }
     
 	/**
@@ -50,6 +54,7 @@ class FWCScoreBoardTest {
     @DisplayName("4. Try to add match with too short team name")
     public void testMatchAddedTwice(){
         //TODO
+    	assertTrue(false);
     }
     
 	/**
@@ -59,6 +64,7 @@ class FWCScoreBoardTest {
     @DisplayName("5. Add match to SB by team's names")
     public void testAddMatchWithNames() {
         //TODO
+    	assertTrue(false);
     }
     
     
@@ -69,6 +75,7 @@ class FWCScoreBoardTest {
     @DisplayName("6. Add match to SB by Match class")
     public void testAddMatchWithMatch() {
         //TODO
+    	assertTrue(false);
     }
     
 	/**
@@ -78,6 +85,7 @@ class FWCScoreBoardTest {
     @DisplayName("7. Check not found match score")
     public void testGetScoreTeamNotFOund() {
         //TODO
+    	assertTrue(false);
     }
     
 	/**
@@ -87,6 +95,7 @@ class FWCScoreBoardTest {
     @DisplayName("8. Game score can't be updated, match not found")
     public void testNotFoundMatchUpdate() {
         //TODO
+    	assertTrue(false);
     }
     
 	/**
@@ -96,6 +105,7 @@ class FWCScoreBoardTest {
     @DisplayName("9. Game score is updated if game in SB")
     public void testGameScoreWasUpdated() {
         //TODO
+    	assertTrue(false);
     }
     
 	/**
@@ -105,6 +115,7 @@ class FWCScoreBoardTest {
     @DisplayName("10. Finished game can't be found")
     public void testGameFinish() {
         //TODO
+    	assertTrue(false);
     }
     
 	/**
@@ -113,7 +124,8 @@ class FWCScoreBoardTest {
     @Test
     @DisplayName("11. Check order board process without timestamp")
     public void testGBSortNoTimeFunction() {
-        //TODO       
+        //TODO
+    	assertTrue(false);
     }
     
 	/**
@@ -122,7 +134,8 @@ class FWCScoreBoardTest {
     @Test
     @DisplayName("12. Check order board with timestamp needed")
     public void testGBSortFunctionwithTimestamp(){
-        //TODO     
+        //TODO  
+    	assertTrue(false);
     }
 
 }
