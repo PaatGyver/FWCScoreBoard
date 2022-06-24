@@ -10,6 +10,7 @@ public class GamesBoard {
     private List<Match> liveMatches;
     
     /**
+     *  @author Patricio Moreno Losana
      * Class constructor, new arrayList is created to initialize liveMatches
      */
     public GamesBoard() {
@@ -119,9 +120,9 @@ public class GamesBoard {
     	pMatches.sort((firstMatch, secondMatch2) -> {
             if (firstMatch.getScoredGoals() == secondMatch2.getScoredGoals() ){
                 if(firstMatch.getMatchCreationTimestamp().after(secondMatch2.getMatchCreationTimestamp())){
-                    return -1;
-                }else {
                     return 1;
+                }else {
+                    return -1;
                 }
             }
             if (firstMatch.getScoredGoals() > secondMatch2.getScoredGoals()) {
