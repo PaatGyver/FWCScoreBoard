@@ -28,6 +28,32 @@ class FWCScoreBoardTest {
     }
     
 	/**
+	 * This test checks Match creation
+	 */
+    @Test
+    @DisplayName("2. Try to create match, test getScore")
+    public void testCreateMatch()throws Exception {
+        Team firstTeam = new Team("Mexico");
+        Team secondTeam = new Team("Canada");
+        Match myMatch = new Match(firstTeam, secondTeam);
+        assertTrue(myMatch.getScore().toString().equals("0 - 0"), "Match was created, added and inicialized");
+        
+    }
+	/**
+	 * This test checks Match set score
+	 */
+    @Test
+    @DisplayName("3. Try to setScore of a match")
+    public void testSetScore()throws Exception {
+        Team firstTeam = new Team("Mexico");
+        Team secondTeam = new Team("Canada");
+        Match myMatch = new Match(firstTeam, secondTeam);
+        Score score = new Score(1,1);
+        myMatch.setScore(score);
+        assertTrue(myMatch.getScore().toString().equals("1 - 1"), "Match was created, added and inicialized");
+        
+    }
+	/**
 	 * This test checks score board constructor, list must be created but empty
 	 */
     @Test
